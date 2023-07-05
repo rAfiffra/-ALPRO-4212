@@ -62,7 +62,7 @@ int main() {
         cout << endl;
 
         int maks = max(a, b);
-        cout << "Nilai maksimum: " << maks << endl<<endl<<endl;
+        cout << "Nilai maksimum: " << maks <<endl<<endl<<endl;
         cout << "==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*=="<<endl<<endl;
 //===============================================================================================================
     }else if(menu == 2){
@@ -74,7 +74,7 @@ int main() {
         cout<<endl;
 
         int minimum = min(a, b);
-        cout << "Nilai minimum: " << minimum << endl<<endl<<endl;
+        cout << "Nilai minimum: " << minimum <<endl<<endl<<endl;
 //===============================================================================================================
     }else if(menu == 3){
         int n1, x;
@@ -90,10 +90,10 @@ int main() {
             cin >> arr[i];
         }
         cout<<endl<<endl<<endl;
-        int n = sizeof(arr) / sizeof(arr[0]);
-        int maks = arrayMax(arr, n);
+        //int n = sizeof(arr) / sizeof(arr[0]);
+        int maks = arrayMax(arr, n1);
 
-        cout << "Nilai maksimum dari array adalah " << maks << endl<<endl<<endl;
+        cout << "Nilai maksimum dari array adalah " << maks <<endl<<endl<<endl;
 //===============================================================================================================
     }else if(menu == 4){
         int n1, x;
@@ -110,8 +110,8 @@ int main() {
         }
         cout<<endl<<endl<<endl;
 
-        int n = sizeof(arr) / sizeof(arr[0]);
-        int minim= arrayMin(arr, n);
+        //int n = sizeof(arr) / sizeof(arr[0]);
+        int minim= arrayMin(arr, n1);
 
         cout << "Nilai minimum dari array adalah " << minim << endl<< endl<< endl;
 //===============================================================================================================
@@ -220,7 +220,7 @@ int main() {
         cout<<endl;
         int arr[n];
         cout << "Masukkan nilai-nilai dalam array:" << endl;
-        for(int i=0; i<n; i++) {
+        for(int i = 0; i < n; i++) {
             cout<<"Masukan nilai ke-"<<i+1<<" :";
             cin >> arr[i];
         }
@@ -228,12 +228,12 @@ int main() {
         int sum = sumOdd(arr, n);
         cout << "Jumlah bilangan genap dalam array adalah: " << sum << endl<<endl<<endl;
 //===============================================================================================================
-    }else if(menu!=0){
+    }else if(menu != 0){
         cout<<"Silakan pilih angka sesuai dengan Menu diatas"<<endl<<endl<<endl;
     }
 
 
-  }while(menu!=0);
+  }while(menu != 0);
 
 
 
@@ -254,13 +254,13 @@ int main() {
 
     //no.4
     int arrayMin(int arr[], int n) {
-        int minim = arr[0];
+        int min = arr[0];
         for(int i = 1; i < n; i++) {
-            if(arr[i] < minim) {
-                minim= arr[i];
+            if(arr[i] < min) {
+                min= arr[i];
             }
         }
-        return minim;
+        return min;
     }
 
     //no.5
@@ -275,19 +275,19 @@ int main() {
 
     //no.7
     int faktor(int a, int b){
-        if(a%b==0){
-            cout<<b<<" adalah faktor dari "<<a<<endl<<endl<<endl;
-        }else if(b%a==0){
-            cout<<a<<" adalah faktor dari "<<b<<endl<<endl<<endl;
+        if(a % b == 0){
+            cout<<b<<" adalah faktor dari " << a <<endl<<endl<<endl;
+        }else if(b % a == 0){
+            cout<< a <<" adalah faktor dari " << b <<endl<<endl<<endl;
         }else{
-            cout<<"kedua bilangan tidak memiliki hubungan"<<endl<<endl<<endl;
+            cout << "kedua bilangan tidak memiliki hubungan" <<endl<<endl<<endl;
         }
     }
 
     //no.8
-    int search(int arr[], int n, int x) {
-    for(int i=0; i<n; i++) {
-        if(arr[i] == x)
+    int search(int arr[], int n, int lookFor) {
+    for(int i = 0; i < n; i++) {
+        if(arr[i] == lookFor)
             return i; //mengembalikan indeks dari nilai yang dicari
     }
     return -1; //mengembalikan -1 jika nilai tidak ditemukan
@@ -308,7 +308,7 @@ int main() {
     //no.10
     int sumEven(int arr[], int n) {
         int sum = 0;
-        for(int i=0; i<n; i++) {
+        for(int i = 0; i < n; i++) {
             if(arr[i] % 2 == 0) //cek apakah elemen merupakan bilangan genap
                 sum += arr[i];
         }
