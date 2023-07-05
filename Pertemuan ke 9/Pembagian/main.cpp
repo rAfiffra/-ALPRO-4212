@@ -1,8 +1,10 @@
 #include <iostream>
 
+using namespase std;
+
 int pembagianRekursif(int bill, int pembagi) {
     if (pembagi == 0) {
-        std::cout << "Error: Pembagian dengan nol tidak diperbolehkan." << std::endl;
+        cout << "Error: Pembagian dengan nol tidak diperbolehkan." <<endl;
         return 0;
     }
 
@@ -15,14 +17,14 @@ int pembagianRekursif(int bill, int pembagi) {
 
 int main() {
     int bill, pembagi;
-    std::cout << "Masukkan Bilangan yang mau dibagi: ";
-    std::cin >> bill;
-    std::cout << "Masukkan Pembagi bilangan: ";
-    std::cin >> pembagi;
-    std::cout <<"\n";
+    cout << "Masukkan Bilangan yang mau dibagi: ";
+    cin >> bill;
+    cout << "Masukkan Pembagi bilangan: ";
+    cin >> pembagi;
+    cout <<endl;
 
     int hasil = pembagianRekursif(bill, pembagi);
-    std::cout << "Hasil pembagian dari "<< bill << "/" << pembagi <<" adalah  " << hasil << std::endl;
+    cout << "Hasil pembagian dari " << bill << "/" << pembagi << " adalah  " << hasil <<endl;
 
     return 0;
 }
